@@ -20,18 +20,13 @@ html{
   --btn-clr:white;
   --overLayOut-bg:rgba(0, 0, 0, 0.5);
   --tick-clr:#00f8c7;
+
 }
 #darkMode{
   --primary-bg-clr: black;
-  --primary-clr: black;
-  --border-clr: black;
-  --btn-clr:black;
   --overLayOut-bg:rgba(234, 213, 213, 0.5);
-  --modal-window-bg: #00f8c7;
-  --light-green-clr: #00f8c7;
-  --fA-clr: #00f8c7;
-  --books-bg: #00f8c7;
-  --tick-clr:#000295;
+  --light-green-clr:#eff0f8;
+  --fA-clr: #eff0f8;
 }
 body{
   font-size:1.6rem; font-size: 16px;
@@ -137,8 +132,8 @@ input{
   border-radius: 0.5rem;
   outline: none;
 }
-input[type='date']{
- width: 76%;
+form div:nth-child(3) > input,input[type='date']{
+ width: 20rem;
 }
 input[type='checkbox']{
   position: relative;
@@ -162,14 +157,13 @@ input[type='checkbox']:checked::after{
   margin: 0;
   border: none;
   border: 0.1rem solid var(--border-clr);
-  background-color: var(--light-green-clr);
   color: var(--btn-clr);
 }
 .form button{
   border-radius: 9999px;
   width: 6rem;
   height: 2.5rem;
-  background-color: var(--light-green-clr);
+  background-color: var(--modal-window-bg);
 }
 .bookAddition{
   position: fixed;

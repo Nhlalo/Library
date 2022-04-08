@@ -10,12 +10,12 @@ const bookInforContainer = document.querySelector('.library');
 lightMode.addEventListener('click', () => {
   lightMode.classList.add('FA-visibility');
   darkMode.classList.remove('FA-visibility')
-  document.body.setAttribute('id', 'darkMode')
+  document.body.removeAttribute('id', 'darkMode')
 })
 darkMode.addEventListener('click', () => {
   lightMode.classList.remove('FA-visibility');
   darkMode.classList.add('FA-visibility');
-  document.body.removeAttribute('id', 'darkMode')
+  document.body.setAttribute('id', 'darkMode')
 })
 
 const modalWindow = document.querySelector('.modal-window');
