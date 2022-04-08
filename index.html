@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="mainContainer ">
+    <header>
+      <h1>Library</h1>
+      <div class="fontAwesome">
+        <div class="lightMode">
+          <i class="fa fa-sun-o"></i>
+          <span>Light Mode</span>
+        </div>
+        <div class="darkMode FA-visibility">
+          <i class="fa fa-moon-o"></i>
+          <span>Dark Mode</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="modal-window">
+        <div class="fontAwesome"><i class="fa fa-close"></i></div>
+       
+          <form action="" class="form">
+            <div>
+              <label for="title">Title:</label>
+              <input type="text" name="title" id="title" required maxlength="50" placeholder=" ">
+            </div>
+            <div>
+              <label for="author">Author:</label>
+              <input type="text" name="author" id="author" required maxlength="50" multiple placeholder=" ">
+            </div>
+            <div>
+              <label for="page">Pages:</label>
+              <input type="number" name="pages" id="pages" required min="1" max="10000" placeholder=" ">
+            </div>
+            <div>
+              <label for="published">Published</label>
+              <input type="date" name="published" id="published" required min="1" max="10000" placeholder=" " inputmode="numeric">
+            </div>
+            <div>
+              <label for="read" class="read">Have you read the book?</label>
+              <input type="checkbox" name="read" id="read" placeholder=" " >
+            </div>
+            <button class="newBook" type="button">Add</button>
+          </form>
+        
+      </section>
+      
+      <section>
+        <button class="bookAddition" type="button">+</button>
+
+        <div class="library">
+          <div>
+            <i class="fa fa-close fa-close2"></i>
+            <h2>The Lord of the Rings</h2>
+            <span>By: J.R.R Tolkien</span>
+            <span>Number of pages: 423</span>
+            <span>Published: 1955/10/20</span>
+           
+              <label class="toggleLabel" >
+                Mark as read <input type="checkbox" name="toggle" checked >
+                <div class="toggle-fill"></div>
+              </label>
+         
+          </div>
+          <div>
+            <i class="fa fa-close fa-close2"></i>
+            <h2>Life of Pi</h2>
+            <span>By: Yann Martel</span>
+            <span>Number of pages: 354</span>
+            <span>Published: 2001/09/11</span>
+           
+              <label class="toggleLabel" >
+                Mark as read <input type="checkbox" name="toggle" checked >
+                <div class="toggle-fill"></div>
+              </label>
+         
+          </div>
+          <div>
+            <i class="fa fa-close fa-close2"></i>
+            <h2>The Great Gatsby</h2>
+            <span>By: F. Scott Fitzgerald</span>
+            <span>Number of pages: 163</span>
+            <span>Published: 1925/04/10</span>
+           
+              <label class="toggleLabel" >
+                Mark as read <input type="checkbox" name="toggle" checked>
+                <div class="toggle-fill"></div>
+              </label>
+         
+          </div>
+          <div>
+            <i class="fa fa-close fa-close2"></i>
+            <h2>The Hobbit</h2>
+            <span>By: J.R.R Tolkien</span>
+            <span>Number of pages: 310</span>
+            <span>Published: 1937/09/10</span>
+           
+              <label class="toggleLabel" >
+                Mark as read <input type="checkbox" name="toggle" checked >
+                <div class="toggle-fill"></div>
+              </label>
+         
+          </div>
+         
+         
+        
+               
+         
+        </div>
+      </section>
+      <div class="overLayOut"></div>
+    </main>
+  </div>
+</body>
+</html>
+ 
