@@ -12,8 +12,6 @@ const completelyReadBooksDisplay = document.querySelector('.readBooks');
 let totalBooks = 4;
 let completelyReadBooks = 4;
 
-
-
 lightMode.addEventListener('click', () => {
   lightMode.classList.add('FA-visibility');
   darkMode.classList.remove('FA-visibility')
@@ -34,7 +32,7 @@ document.querySelector('.bookAddition').addEventListener('click', e => {
   e.target.classList.add('bookAddition-visibility')
 
 })
-
+ 
 document.querySelector('.fa-close').addEventListener('click', () => {
   modalWindow.classList.remove('modal-window-visibility');
   overLayOut.classList.remove('overLayOut-visibility');
@@ -131,25 +129,18 @@ const inputChecked = document.querySelector('.toggleLabel input[type="checkbox"]
 
    const faClose =  document.querySelector('.fa-close2');
   
-     faClose.addEventListener('click', () => {
+     faClose.addEventListener('click', e => {
       console.log(faClose.nextElementSibling)
       bookInforContainer.removeChild(faClose.parentElement)
       const indexOfArray = userLibrary.findIndex(user => user.title == `${faClose.nextElementSibling.textContent}`)
       userLibrary.splice(indexOfArray,1)
-      totalBooks--;
-      totalBooksDisplay.textContent = completelyReadBooks;
+      --totalBooks;
+      totalBooksDisplay.textContent = totalBooks;
       if(e.target.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.checked == true){
         completelyReadBooks--;
         completelyReadBooksDisplay.textContent = completelyReadBooks;
      }
-     
-     
     })
-
-
- 
-    
-  
 }
 
 document.querySelector('.newBook').addEventListener('click', e => {
@@ -160,9 +151,9 @@ document.querySelector('.newBook').addEventListener('click', e => {
   addInforDetail()
   totalBooks++;
   totalBooksDisplay.textContent = totalBooks;
-  document.querySelector('.bookAddition').classList.remove('bookAddition-visibility')
 }
-console.log(userLibrary)
+  document.querySelector('.bookAddition').classList.remove('bookAddition-visibility')
+
   title.value = ''
   author.value = '';
   pages.value = '';
@@ -187,12 +178,10 @@ inputCheckeds.forEach(inputChecked => {
          userLibrary[indexOfArray].read = 'Read';
          completelyReadBooks++;
          completelyReadBooksDisplay.textContent = completelyReadBooks;
-     
       }
     }
     )
   })
-
  
   document.querySelectorAll('.fa-close2').forEach( deleteBookInfor => {
     const bookInforDeletion = deleteBookInfor.parentElement;
