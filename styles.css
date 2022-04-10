@@ -271,5 +271,15 @@ h2{
 .toggleLabel input:checked ~ .toggle-fill::after{
   transform: translateX(2rem) ;
  }
+ 
+ @media(prefers-color-scheme:dark){
+   :root{
+    --primary-bg-clr: rgb(23, 22, 22);
+    --overLayOut-bg:rgba(234, 213, 213, 0.5);
+    --fA-clr: #c2c3dc;
+    --header-clr: #c2c3dc;
+    --toggle-btn-clr:black;
+   }
+ }
 
  

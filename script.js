@@ -30,7 +30,6 @@ document.querySelector('.bookAddition').addEventListener('click', e => {
   modalWindow.classList.add('modal-window-visibility');
   overLayOut.classList.add('overLayOut-visibility')
   e.target.classList.add('bookAddition-visibility')
-
 })
  
 document.querySelector('.fa-close').addEventListener('click', () => {
@@ -101,7 +100,6 @@ function addInforDetail(){
       completelyReadBooksDisplay.textContent = completelyReadBooks;
     }else{
       newDiv.setAttribute('id', 'notRead')
-
     }
 
 const inputChecked = document.querySelector('.toggleLabel input[type="checkbox"]');
@@ -121,14 +119,11 @@ const inputChecked = document.querySelector('.toggleLabel input[type="checkbox"]
          userLibrary[indexOfArray].read = 'Read';
          completelyReadBooks++;
          completelyReadBooksDisplay.textContent = completelyReadBooks;
-
       }
     }
     )
 
-
    const faClose =  document.querySelector('.fa-close2');
-  
      faClose.addEventListener('click', e => {
       console.log(faClose.nextElementSibling)
       bookInforContainer.removeChild(faClose.parentElement)
