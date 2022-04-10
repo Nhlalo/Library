@@ -20,6 +20,7 @@ html{
   --btn-clr:white;
   --overLayOut-bg:rgba(0, 0, 0, 0.5);
   --tick-clr:#00f8c7;
+  --statsBlock-bg:#950000;
 
 }
 #darkMode{
@@ -65,6 +66,15 @@ h1{
 }
 .fontAwesome span{
   color:var(--fA-clr)
+}
+.bookLog{
+  display: flex;
+  justify-content: center;
+}
+.bookLog2{
+  background: var(--statsBlock-bg);
+  padding: 2rem;
+  border-radius: 1rem;
 }
 .modal-window{
   visibility: hidden;
@@ -176,6 +186,9 @@ input[type='checkbox']:checked::after{
   background: blue;
   color: white;
   z-index: 2;
+}
+.bookAddition-visibility{
+  visibility: hidden;
 }
 .form input[type='text']:focus,
  input[type='number']:focus{
